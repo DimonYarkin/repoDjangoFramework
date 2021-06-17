@@ -1,6 +1,6 @@
 [
     {
-        "category": "дом",
+        "category": "???",
         "name": "комфорт 1",
         "image": "products_images/product-1.jpg",
         "short_desc": "комфортный стул",
@@ -9,7 +9,7 @@
         "quantity": "17"
     },
     {
-        "category": "дом",
+        "category": "???",
         "name": "комфорт 2",
         "image": "products_images/product-2.jpg",
         "short_desc": "очень комфортный стул",
@@ -18,7 +18,7 @@
         "quantity": "21"
     },
     {
-        "category": "дом",
+        "category": "???",
         "name": "люкс",
         "image": "products_images/product-3.jpg",
         "short_desc": "использованы премиальные материалы",
@@ -27,7 +27,7 @@
         "quantity": "7"
     },
     {
-        "category": "дом",
+        "category": "???",
         "name": "люкс 2",
         "image": "products_images/product-4.jpg",
         "short_desc": "использованы премиальные материалы",
@@ -36,7 +36,7 @@
         "quantity": "5"
     },
     {
-        "category": "дом",
+        "category": "???",
         "name": "люкс 3",
         "image": "products_images/product-5.jpg",
         "short_desc": "использованы премиальные материалы",
@@ -45,7 +45,7 @@
         "quantity": "3"
     },
     {
-        "category": "офис",
+        "category": "????",
         "name": "стандарт",
         "image": "products_images/product-6.jpg",
         "short_desc": "универсальное решение",
@@ -54,7 +54,7 @@
         "quantity": "27"
     },
     {
-        "category": "офис",
+        "category": "????",
         "name": "премиум",
         "image": "products_images/product-7.jpg",
         "short_desc": "улучшенный дизайн",
@@ -63,7 +63,7 @@
         "quantity": "9"
     },
     {
-        "category": "офис",
+        "category": "????",
         "name": "премиум 2",
         "image": "products_images/product-8.jpg",
         "short_desc": "улучшенный дизайн",
@@ -72,7 +72,7 @@
         "quantity": "8"
     },
     {
-        "category": "модерн",
+        "category": "??????",
         "name": "новинка",
         "image": "products_images/product-9.jpg",
         "short_desc": "инновационный дизайн",
@@ -81,7 +81,7 @@
         "quantity": "18"
     },
     {
-        "category": "модерн",
+        "category": "??????",
         "name": "прогресс",
         "image": "products_images/product-10.jpg",
         "short_desc": "прогрессивный дизайн",
@@ -90,7 +90,7 @@
         "quantity": "12"
     },
     {
-        "category": "модерн",
+        "category": "??????",
         "name": "прогресс 2",
         "image": "products_images/product-11.jpg",
         "short_desc": "прогрессивный дизайн",
@@ -99,7 +99,7 @@
         "quantity": "11"
     },
     {
-        "category": "модерн",
+        "category": "??????",
         "name": "прогресс 3",
         "image": "products_images/product-12.jpg",
         "short_desc": "прогрессивный дизайн",
@@ -108,7 +108,7 @@
         "quantity": "7"
     },
     {
-        "category": "классика",
+        "category": "????????",
         "name": "венеция",
         "image": "products_images/product-13.jpg",
         "short_desc": "классические формы",
@@ -117,7 +117,7 @@
         "quantity": "25"
     },
     {
-        "category": "классика",
+        "category": "????????",
         "name": "тоскана",
         "image": "products_images/product-14.jpg",
         "short_desc": "эргономичная спинка",
@@ -126,7 +126,7 @@
         "quantity": "18"
     },
     {
-        "category": "классика",
+        "category": "????????",
         "name": "рим",
         "image": "products_images/product-15.jpg",
         "short_desc": "удачные пропорции",
@@ -135,7 +135,7 @@
         "quantity": "8"
     },
     {
-        "category": "классика",
+        "category": "????????",
         "name": "рим 2",
         "image": "products_images/product-16.jpg",
         "short_desc": "удачные пропорции",
@@ -144,7 +144,7 @@
         "quantity": "7"
     },
     {
-        "category": "классика",
+        "category": "????????",
         "name": "рим 3",
         "image": "products_images/product-17.jpg",
         "short_desc": "удачные пропорции",
