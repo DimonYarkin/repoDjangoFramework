@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-load_dotenv(BASE_DIR / '.env')
+# load_dotenv(BASE_DIR / '.env')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -137,8 +137,8 @@ LOGIN_URL = '/auth/login/'
 
 # EMAIL_HOST = 'smtp.yandex.ru'
 # EMAIL_PORT = 465
-# EMAIL_HOST_USER= 'dmitryyarkin@yandex.ru'
-# EMAIL_HOST_PASSWORD ='dimon17621762'
+# EMAIL_HOST_USER= ''
+# EMAIL_HOST_PASSWORD =''
 # EMAIL_USE_SSL = True
 
 EMAIL_HOST = 'localhost'

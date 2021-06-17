@@ -58,6 +58,7 @@ def register(request):
     
     
 def edit(request):
+
     title = 'редактирование'
     
     if request.method == 'POST':
@@ -71,3 +72,6 @@ def edit(request):
     content = {'title': title, 'edit_form': edit_form}
     
     return render(request, 'authapp/edit.html', content)
+
+def send_verify_link(user):
+    pass
