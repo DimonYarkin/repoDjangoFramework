@@ -75,3 +75,6 @@ def edit(request):
 
 def send_verify_link(user):
     pass
+
+def verify(request, email, key):
+    pass
