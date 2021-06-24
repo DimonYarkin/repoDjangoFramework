@@ -41,9 +41,9 @@ def save_user_profile(backend, user, response, *args, **kwargs):
 
         age = timezone.now().date().year - bdate.year
         if age < 18:
-            shopuserprofiles = ShopUserProfile.objects.filter(user=user)
-            for shopuserprofile in shopuserprofiles:
-                shopuserprofile.delete()
+            # shopuserprofiles = ShopUserProfile.objects.filter(user=user)
+            # for shopuserprofile in shopuserprofiles:
+            #     shopuserprofile.delete()
             user.delete()
             raise AuthForbidden('social_core.backends.vk.VKOAuth2')
         user.age = age
