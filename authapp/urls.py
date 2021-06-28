@@ -3,7 +3,7 @@
 import authapp.views as authapp
 from django.urls import re_path, path
 
-app_name="authapp"
+app_name = "authapp"
 
 urlpatterns = [
     re_path(r'^login/$', authapp.login, name='login'),
@@ -12,5 +12,3 @@ urlpatterns = [
     re_path(r'^edit/$', authapp.edit, name='edit'),
     path('verify/<email>/<key>/', authapp.verify, name='verify')
 ]
-
-    
