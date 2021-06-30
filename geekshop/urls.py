@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 
 from django.urls import re_path, path
 
-app_name="mainapp"
+app_name = "mainapp"
 
 urlpatterns = [
     re_path(r'^$', mainapp.main, name='main'),
@@ -18,6 +18,7 @@ urlpatterns = [
     re_path(r'^basket/', include('basketapp.urls', namespace='basket')),
     path('', include('social_django.urls', namespace='social')),
     re_path(r'^admin/', include('adminapp.urls', namespace='admin')),
+    path('order/', include('ordersapp.urls'), namespace='order'),
 ]
 
 if settings.DEBUG:
