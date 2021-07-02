@@ -18,7 +18,7 @@ urlpatterns = [
     re_path(r'^basket/', include('basketapp.urls', namespace='basket')),
     path('', include('social_django.urls', namespace='social')),
     re_path(r'^admin/', include('adminapp.urls', namespace='admin')),
-    path('order/', include('ordersapp.urls'), namespace='order'),
+    path('order/', include('ordersapp.urls'), name='order'),
 ]
 
 if settings.DEBUG:
