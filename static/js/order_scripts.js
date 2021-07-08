@@ -99,6 +99,7 @@ window.onload = function () {
                             var price_html = '<span className="orderitems-'+orderitem_num+'-price">'+data.price.toString().replace('.',',')+'</span> руб'
                             var cur_tr = $('.order_form table').find('tr:eq('+(orderitem_num+1)+')')
                             cur_tr.find('td:eq(2)').html(price_html);
+                            orderSumRecalc()
                         }
                     }
                 }
@@ -107,4 +108,15 @@ window.onload = function () {
     });
 
 
+    function orderSumRecalc() {
+        order_total_quantity = 0;
+        order_total_cost = 0;
+        for (i=0; i<TOTAL_FORMS; i++){
+            order_total_quantity += quantity_arr[i]
+            order_total_cost += price_arr[i]
+        }
+        $('.order_total_quantity').html(order_total_quantity.toString())
+        $('.order_total_cost').html(order_total_cost.toFixed(2).toString())
+
+    }
 }
