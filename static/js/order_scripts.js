@@ -66,24 +66,45 @@ window.onload = function () {
 
 
     $('.formset_row').formset({
-       addText: 'добавить продукт',
-       deleteText: 'удалить',
-       prefix: 'orderitems',
-       removed: deleteOrderItem
+        addText: 'добавить продукт',
+        deleteText: 'удалить',
+        prefix: 'orderitems',
+        removed: deleteOrderItem
     });
 
-   function deleteOrderItem(row) {
-       var target_name= row[0].querySelector('input[type="number"]').name;
-       orderitem_num = parseInt(target_name.replace('orderitems-', '').replace('-quantity', ''));
-       delta_quantity = -quantity_arr[orderitem_num];
-       orderSummaryUpdate(price_arr[orderitem_num], delta_quantity);
+    function deleteOrderItem(row) {
+        var target_name = row[0].querySelector('input[type="number"]').name;
+        orderitem_num = parseInt(target_name.replace('orderitems-', '').replace('-quantity', ''));
+        delta_quantity = -quantity_arr[orderitem_num];
+        orderSummaryUpdate(price_arr[orderitem_num], delta_quantity);
     }
 
     $('.order_form select').change(function () {
-       var target = event.target;
-       console.log(target);
-    });
+        var target = event.target;
+        console.log(target);
+        orderitem_num = parseInt(target.name.replace('orderitems-', '').replace('-product', ''));
+        var orderitem_product_pk = target.selectedIndex
+            // target.options(target.selectedIndex);
 
+        if (orderitem_product_pk){
+            $.ajax(
+                {
+                    url: '/order/product/' + orderitem_product_pk + '/price/',
+                    success: function (data) {
+                        if (data.price) {
+                            price_arr[orderitem_product_pk] = parseFloat(data.price);
+                            if (isNaN(quantity_arr[orderitem_num])) {
+                                quantity_arr[orderitem_num] = 0;
+                            }
+                            var price_html = '<span className="orderitems-'+orderitem_num+'-price">'+data.price.toString().replace('.',',')+'</span> руб'
+                            var cur_tr = $('.order_form table').find('tr:eq('+(orderitem_num+1)+')')
+                            cur_tr.find('td:eq(2)').html(price_html);
+                        }
+                    }
+                }
+            )
+        }
+    });
 
 
 }
