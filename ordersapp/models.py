@@ -50,11 +50,17 @@ class Order(models.Model):
         _totalquantity = sum(list(map(lambda x: x.get_product_cost(), _items)))
         return _totalquantity
 
-    # def delete(self):
-    #     self.product.quantity += self.quantity
-    #     self.product.save()
-    #     super(self.__class__, self).delete()
+    def delete(self):
+        for item in self.orderitems.select_related():
+            item.product.quantity += item.quantity
+            item.product.save()
 
+        self.is_active = False
+        self.save()
+
+    @staticmethod
+    def get_item(pk):
+        return Order.objects.get(pk=pk)
 
 class OrderItem(models.Model):
     objects = OrderItemQuerySet.as_manager()
