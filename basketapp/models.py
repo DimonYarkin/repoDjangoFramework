@@ -44,7 +44,16 @@ class Basket(models.Model):
     def get_items(request_user):
         return Basket.objects.filter(user=request_user)
 
-    def delete(self):
-        self.product.quantity += self.quantity
+    # def delete(self, *args, **kwargs):
+    #     for object in self:
+    #         object.product.quantity += object.quantity
+    #         object.product.save()
+    #     super(BasketQuerySet, self).delete(*args, **kwargs)
+
+    def save(self, *args, **kwargs):
+        if self.pk:
+            self.product.quantity -= self.quantity - self.__class__.get_item(self.pk).quantity
+        else:
+            self.product.quantity -= self.quantity
         self.product.save()
-        super(self.__class__, self).delete()
+        super(self.__class__, self).save(*args, **kwargs)
