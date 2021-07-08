@@ -41,14 +41,14 @@ class Basket(models.Model):
 
     total_cost = property(_get_total_cost)
 
+    @staticmethod
     def get_items(request_user):
         return Basket.objects.filter(user=request_user)
 
-    # def delete(self, *args, **kwargs):
-    #     for object in self:
-    #         object.product.quantity += object.quantity
-    #         object.product.save()
-    #     super(BasketQuerySet, self).delete(*args, **kwargs)
+    def delete(self, *args, **kwargs):
+        self.product.quantity += self.quantity
+        self.product.save()
+        super().delete(*args, **kwargs)
 
     def save(self, *args, **kwargs):
         if self.pk:
